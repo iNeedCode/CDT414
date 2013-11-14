@@ -1,4 +1,5 @@
 Status of CI:
+[![Build Status](https://travis-ci.org/iNeedCode/CDT414.png?branch=master)](https://travis-ci.org/iNeedCode/CDT414)
 
 ###Project
 
