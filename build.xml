@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ====================================================================== 
+     14.11.2013 22:00:31                                                        
+
+     CDT414    
+     Software Verification and Validation
+                   
+     Willy Wonka                                                                
+     ====================================================================== -->
+<project name="CDT414" default="run">
+    <description>
+            Software Verification and Validation
+    </description>
+
+    <!-- ================================= 
+          target: run              
+         ================================= -->
+    <target name="run" depends="compile" description="Software Verification and Validation">
+		<junit printsummary="on">
+			<test name="TestTriangle" />
+			<classpath>
+				<pathelement location="/Users/wonka/Dev/workspace/CDT414/libs/junit-4.11.jar" />
+				<pathelement location="build" />
+			</classpath>
+			
+		</junit>
+    	
+    	<!--
+		<java classname="Triangle">
+    		<classpath path="build" />
+		</java>
+		-->
+    </target>
+
+    <!-- - - - - - - - - - - - - - - - - - 
+          target: compile                      
+         - - - - - - - - - - - - - - - - - -->
+    <target name="compile">
+        <javac srcdir="src"
+			destdir="build"
+			debug="on"
+			includeantruntime="false"
+		/>
+    	
+    	<javac srcdir="test"
+			destdir="build"
+			classpath="/Users/wonka/Dev/workspace/CDT414/libs/junit-4.11.jar"
+			debug="on"
+			includeantruntime="false"
+		/>
+    </target>
+
+</project>
