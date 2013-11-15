@@ -8,7 +8,7 @@ public class TestTriangle {
 	@Test
 	public void getTypeTest() {
 		Triangle triangle = new Triangle();
-		assertEquals("return from Triangle::getType", triangle.getType(0, 0, 0));
+		assertEquals("return from Triangle::getTyp", triangle.getType(0, 0, 0));
 	} 
 
 }
