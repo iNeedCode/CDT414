@@ -5,22 +5,29 @@ import org.junit.Test;
 public class TestTriangle {
 
 	@Test
-	public void getTypeTest1() {
+	public void getTypeTestEquilateral() {
 		Triangle triangle = new Triangle();
-		assertEquals("Equilateral", triangle.getType(2, 2, 2));
+		assertEquals("Equilateral", triangle.getType(3, 3, 3));
 	}
 	
 	@Test
-	public void getTypeTest2() {
+	public void getTypeTestIsosceles() {
 		Triangle triangle = new Triangle();
-		assertEquals("Isosceles", triangle.getType(2, 2, 4));
-		assertEquals("Isosceles", triangle.getType(4, 2, 2));
+		assertEquals("Isosceles", triangle.getType(3, 3, 4));
+		assertEquals("Isosceles", triangle.getType(3, 4, 4));
 	} 
 	
 	@Test
-	public void getTypeTest3() {
+	public void getTypeTestScalene() {
 		Triangle triangle = new Triangle();
-		assertEquals("Scalene", triangle.getType(1, 2, 3));
+		assertEquals("Scalene", triangle.getType(2, 4, 3));		
+	}
+	
+	@Test
+	public void getTypeTestNotValid() {
+		Triangle triangle = new Triangle();
+		assertEquals("Is not a valid triangle", triangle.getType(2, 2, 4));
+		assertEquals("Is not a valid triangle", triangle.getType(1, 2, 3));
 	} 
 	
 

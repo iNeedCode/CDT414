@@ -11,17 +11,22 @@ public class Triangle {
 	
 	public String getType(int i, int j, int k)
 	{
-		if (i == j && j == k) {
+		
+		if ((i == j && j == k) && isValid(i, j, k)) {
 			return "Equilateral";
 		} 
-		else if (i == j || j == k) {
+		else if ((i == j || j == k) && isValid(i, j, k)) {
 			return "Isosceles";
 		}
-		else if (i != j && i != k && j != k) {
+		else if ((i != j && i != k && j != k) && isValid(i, j, k)) {
 			return "Scalene";
 		}
 		else {
-			return "A not defined Triangle";
+			return "Is not a valid triangle";
 		}
+	}
+	
+	public boolean isValid(int sideA, int sideB, int sideC){
+	    return (sideA>0)&&(sideB>0)&&(sideC>0)&&(sideA+sideB>sideC)&&(sideA+sideC>sideB)&&(sideC+sideB>sideA);
 	}
 }
