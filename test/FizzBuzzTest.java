@@ -7,16 +7,6 @@ import org.junit.Test;
 
 public class FizzBuzzTest {
 
-//	@Test
-//	public void getFizzBuzzTest() {
-//		FizzBuzz fb = new FizzBuzz();
-//		List<String> rstl = fb.printFizzBuzzSequence();
-//		
-//		for(int i = 0; i <= 100; i++) {
-//			System.out.print(rstl.get(i));
-//		}
-//	}
-	
 	@Test
 	public void getAllFizzTest() {
 		FizzBuzz fb = new FizzBuzz();
@@ -26,7 +16,7 @@ public class FizzBuzzTest {
 		for(int i = 1; i <= 100; i++) {
 			if(((i % 5) == 0) && !((i % 3) == 0) ){
 				assertEquals("Buzz", rstl.get(i-1));
-				System.out.println("Array " + i + ": " +rstl.get(i-1) + " ");
+				//System.out.println("Array " + i + ": " +rstl.get(i-1) + " ");
 			}
 			
 		}
@@ -41,7 +31,7 @@ public class FizzBuzzTest {
 		for(int i = 1; i <= 100; i++) {
 			if(((i % 3) == 0) && !((i % 5) == 0) ){
 				assertEquals("Fizz", rstl.get(i-1));
-				System.out.println("Array " + i + ": " +rstl.get(i-1) + " ");
+				//System.out.println("Array " + i + ": " +rstl.get(i-1) + " ");
 			}
 			
 		}
@@ -56,7 +46,7 @@ public class FizzBuzzTest {
 		for(int i = 1; i <= 100; i++) {
 			if(((i % 3) == 0) && ((i % 5) == 0) ){
 				assertEquals("FizzBuzz", rstl.get(i-1));
-				System.out.println("Array " + i + ": " +rstl.get(i-1) + " ");
+				//System.out.println("Array " + i + ": " +rstl.get(i-1) + " ");
 			}
 			
 		}
@@ -71,7 +61,7 @@ public class FizzBuzzTest {
 		for(int i = 1; i <= 100; i++) {
 			if( !((i % 3) == 0) && !((i % 5) == 0) ){
 				assertEquals(Integer.toString(i), rstl.get(i-1));
-				System.out.println("Array " + i + ": " +rstl.get(i-1) + " ");
+				//System.out.println("Array " + i + ": " +rstl.get(i-1) + " ");
 			}
 			
 		}
